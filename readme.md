@@ -7,6 +7,7 @@ A centralized index of my technical notes, concepts, and learnings.
 ## Topics
 
 - [Redis](redis.md)
+- [RAG](rag.md)
 
 ## How to Use
 
