@@ -8,6 +8,7 @@ A centralized index of my technical notes, concepts, and learnings.
 
 - [Redis](redis.md)
 - [RAG](rag.md)
+- [Kafka](kafka.md)
 
 ## How to Use
 
