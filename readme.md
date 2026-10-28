@@ -6,6 +6,9 @@ A centralized index of my technical notes, concepts, and learnings.
 
 ## Topics
 
+### Systems
+- [HLS](hls.md)
+
 ### Data Stores and Event streaming
 - [Redis](redis.md)
 - [Kafka](kafka.md)
