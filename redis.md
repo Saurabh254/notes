@@ -1,4 +1,4 @@
-# Redis: The Complete Guide
+# Redis
 
 A deep, practical walkthrough of Redis. How it works, what it offers, every major data structure, Streams in depth, persistence, scaling, and the patterns you will actually use in production.
 
@@ -713,13 +713,16 @@ except redis.ResponseError as e:
     if "BUSYGROUP" not in str(e):
         raise
 
+
 # Producer
 def publish(order):
     return r.xadd(STREAM, order, maxlen=100_000, approximate=True)
 
+
 # Consumer loop
 def process(fields):
     print("processing", fields)
+
 
 def consume():
     while True:
@@ -734,6 +737,7 @@ def consume():
                 except Exception:
                     # leave it pending, a reclaimer will pick it up
                     pass
+
 
 # Reclaimer: run periodically, rescues stuck entries
 def reclaim():

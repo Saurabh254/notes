@@ -1,4 +1,4 @@
-# RAG Deep Dive for System Design
+# RAG
 
 A working reference for designing, scaling, and defending Retrieval Augmented Generation systems. Built for system design rounds and real production work.
 

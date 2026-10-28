@@ -6,9 +6,14 @@ A centralized index of my technical notes, concepts, and learnings.
 
 ## Topics
 
+### Data Stores and Event streaming
 - [Redis](redis.md)
-- [RAG](rag.md)
 - [Kafka](kafka.md)
+
+### AI Agents
+
+- [AI Engineering](ai_engineering.md)
+- [RAG](rag.md)
 
 ## How to Use
 

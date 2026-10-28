@@ -1,4 +1,4 @@
-# Kafka: A Plain Language Guide for System Design
+# Kafka
 
 Everything you need to reason about Kafka in a design discussion. Simple words, real numbers, clear tradeoffs.
 
@@ -210,13 +210,15 @@ A small example in Python:
 ```python
 from confluent_kafka import Producer
 
-p = Producer({
-    "bootstrap.servers": "broker1:9092",
-    "enable.idempotence": True,
-    "acks": "all",
-    "compression.type": "lz4",
-    "linger.ms": 10,
-})
+p = Producer(
+    {
+        "bootstrap.servers": "broker1:9092",
+        "enable.idempotence": True,
+        "acks": "all",
+        "compression.type": "lz4",
+        "linger.ms": 10,
+    }
+)
 
 p.produce("orders", key="user_42", value=b'{"order_id": 1}')
 p.flush()
@@ -254,20 +256,22 @@ Consumers track progress by committing offsets. Kafka stores them in an internal
 ```python
 from confluent_kafka import Consumer
 
-c = Consumer({
-    "bootstrap.servers": "broker1:9092",
-    "group.id": "billing_service",
-    "enable.auto.commit": False,
-    "auto.offset.reset": "earliest",
-})
+c = Consumer(
+    {
+        "bootstrap.servers": "broker1:9092",
+        "group.id": "billing_service",
+        "enable.auto.commit": False,
+        "auto.offset.reset": "earliest",
+    }
+)
 c.subscribe(["orders"])
 
 while True:
     msg = c.poll(1.0)
     if msg is None or msg.error():
         continue
-    handle(msg)      # do the work first
-    c.commit(msg)    # then record progress
+    handle(msg)  # do the work first
+    c.commit(msg)  # then record progress
 ```
 
 ### Rebalancing
