@@ -18,6 +18,9 @@ A centralized index of my technical notes, concepts, and learnings.
 - [AI Engineering](ai_engineering.md)
 - [RAG](rag.md)
 
+### Designing blogs
+- [Master Master DB](master-master-db.md)
+
 ## How to Use
 
 - Each Markdown file contains notes for one topic.
